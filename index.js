@@ -8,6 +8,7 @@ dotenv.config();
 
 // 設定 HTTP request 頭為 JSON 格式
 app.use(express.json());
+app.use(cors({ origin: "https://pt-huang.github.io/react-tenfolio/" }));
 
 // 設定 Gmail SMTP 伺服器
 const transporter = nodemailer.createTransport({
