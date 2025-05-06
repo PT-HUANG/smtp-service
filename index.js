@@ -18,6 +18,11 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// 維持伺服器活躍
+app.get("/", (req, res) => {
+  res.send("Server is alive!");
+});
+
 // POST 請求來發送郵件
 app.post("/", async (req, res) => {
   const { name, email, message } = req.body;
