@@ -2,10 +2,8 @@
 const { defineString } = require("firebase-functions/params");
 const { onRequest } = require("firebase-functions/v2/https");
 const nodemailer = require("nodemailer");
-const dotenv = require("dotenv");
 const { initializeApp } = require("firebase-admin/app");
 
-dotenv.config();
 initializeApp();
 
 // 環境變數
